@@ -1,4 +1,3 @@
-# episode1_essai
 Episode 1 website with terminal style html forms
 
 site.html is the basic site
