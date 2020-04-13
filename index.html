@@ -1,52 +1,300 @@
 <!DOCTYPE html>
 <head>
+
 	<meta charset="utf-8">
 	<title>Épisode 1</title>
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=divice-width">
 	<meta name="author" content="helene_stavropoulou">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="script.js"></script> 
+    <script type="text/javascript" src="script.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 
 <body>
-	<h1>Episode-1</h1>
-
-	<p class="ennonce">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-    </p>
-
-	<p class="narration"> 
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,  
-    </p>
-
-    <input type="button" class="b crt" id="button1" onclick="completeSentence(3)" value="Démarrer l'ordinateur"/>
     
-    <form class="terminal" action="mailto:ioligatsika@outlook.com" method="post" enctype="text/plain">
-        <p id="phrase0"><blink>_</blink></p>
+    <h1>Episode-1</h1>
+
+    <p class="narration">
+    <div class="next">
+        <div class="btnstart" name="scene1">
+        <button onclick="hideElement('scene1'),showElement('scene2','trans2')"> Commencer </button>
+        </div>
+    </div>
+    </p>
+
+    <p class="narration">
+    <div class="translation">
+        <div class="btnstart" name="scene1">
+        <button onclick="translation('trans1')"> Μετάφραση </button>
+        </div>
+    </div>
+    </p>
+
+    <div class="ennonce">
+        <div class="swap first" name="scene1"> 
+            Για να θυμηθούμε την ιστορία, είσαι αστροναύτης. Είσαι μέλος μιας διαστημικής αποστολής προς τη Σελήνη και βρίσκεσαι αυτή τη στιγμή μέσα στο διαστημόπλοιο, στη μέση του διαστήματος. Το υπόλοιπο πλήρωμα βρίσκεται επίσης μέσα στο διαστημόπλοιο και περιμένετε όλοι υπομονετικά την άφιξή σας. Σήμερα η ημέρα είναι Κυριακή και περνάς την ημέρα σου χαλαρά, για να ξεκουραστείς και να είσαι έτοιμος/ έτοιμη για την εβδομάδα που έρχεται. Άλλο ένα συνηθισμένο απόγευμα στο διαστημόπλοιο ...
+        </div>
+    </div>
+
+    <p class="translation" id="trans1" name="scene1">
+            Για να θυμηθούμε την ιστορία, είσαι αστροναύτης. Είσαι μέλος μιας διαστημικής αποστολής προς τη Σελήνη και βρίσκεσαι αυτή τη στιγμή μέσα στο διαστημόπλοιο, στη μέση του διαστήματος. Το υπόλοιπο πλήρωμα βρίσκεται επίσης μέσα στο διαστημόπλοιο και περιμένετε όλοι υπομονετικά την άφιξή σας. Σήμερα η ημέρα είναι Κυριακή και περνάς την ημέρα σου χαλαρά, για να ξεκουραστείς και να είσαι έτοιμος/ έτοιμη για την εβδομάδα που έρχεται. Άλλο ένα συνηθισμένο απόγευμα στο διαστημόπλοιο ...
+    </p>
+
+    <div class="next">
+        <div class="btnnext" name="scene2">
+        <button onclick="hideElement('scene2','ignore'),showElement('scene3','trans3')"> Suivant </button>
+        </div>
+    </div>
+
+    <div class="translation">
+        <div class="btntrans" name="scene2">
+        <button onclick="translation('trans2')"> Μετάφραση </button>
+        </div>
+    </div>
+
+    <div class="previous">
+        <div class="btnprevious" name="scene2">
+        <button onclick="hideElement('scene2','ignore'),showElement('scene1','trans1')"> Précédent </button>
+        </div>
+    </div>
+    
+    <div class="narration">
+        <div class="swap" name="scene2"> 
+            Ξυπνάς ξαφνικά και βρίσκεσαι στην καμπίνα σου. Πάνω από το κεφάλι σου βλέπεις να αιωρείται συμπικνωμένη πορτοκαλάδα, το δοχείο ξέφυγε καταλάθως από το χέρι σου όταν σε πήρε ο ύπνος. Αριστερά σου υπάρχει ένα στρογγυλό παράθυρο, από το οποίο χτες φαινόταν η Γη. Τώρα το μόνο που μπορείς να δεις είναι μαύριο σκοτάδι. Φοράς τα γυαλιά σου και διακρίνεις επιπλέον μερικά μακρινά αστέρια. Κοιτάς το ρολόι και αναρωτιέσαι αν είναι ώρα να φας. Ρίχνεις μια δεύτερη ματιά στην αιωρούμενη πορτοκαλάδα και σκέφτεσαι ότι δεν πεινάς ακόμα. Αντί αυτού, αποφασίζεις να μείνεις στην καμπίνα και να βάλεις τάξη στα πράγματά σου. Το γραφείο σου είναι επίσης ακατάστατο. Γυρνάς το βλέμα σου στην υπόλοιπη καμπίνα και βλέπεις : 
+        </div> 
+    </div>
+
+    <p class="translation" id="trans2" name="scene2">
+        Για να θυμηθούμε την ιστορία, είσαι αστροναύτης. Είσαι μέλος μιας διαστημικής αποστολής προς τη Σελήνη και βρίσκεσαι αυτή τη στιγμή μέσα στο διαστημόπλοιο, στη μέση του διαστήματος. Το υπόλοιπο πλήρωμα βρίσκεται επίσης μέσα στο διαστημόπλοιο και περιμένετε όλοι υπομονετικά την άφιξή σας. Σήμερα η ημέρα είναι Κυριακή και περνάς την ημέρα σου χαλαρά, για να ξεκουραστείς και να είσαι έτοιμος/ έτοιμη για την εβδομάδα που έρχεται. Άλλο ένα συνηθισμένο απόγευμα στο διαστημόπλοιο ...
+    </p>
+
+    <div class="next">
+        <div class="btnnext" name="scene3">
+        <button onclick="hideElement('scene3','ignore'),showElement('scene4','trans4')"> Suivant </button>
+        </div>
+    </div>
+
+    <div class="translation">
+        <div class="btntrans" name="scene3">
+        <button onclick="translation('trans3')"> Μετάφραση </button>
+        </div>
+    </div>
+
+    <div class="previous">
+        <div class="btnprevious" name="scene3">
+        <button onclick="hideElement('scene3','ignore'),showElement('scene2','trans2')"> Précédent </button>
+        </div>
+    </div>
+
+    <div class="narration">
+        <div class="swap" name="scene3"> 
+            Αφού ολοκλήρωσες το μάζεμα της πορτοκαλάδας και το συμμάζεμα του γραφείου σου, βαριέσαι και αποφασίζεις να ανοίξεις τον φορητό υπολογιστή σου.
+        </div> 
+    </div>
+
+    <p class="translation" id="trans3" name="scene3">
+        Για να θυμηθούμε την ιστορία, είσαι αστροναύτης. Είσαι μέλος μιας διαστημικής αποστολής προς τη Σελήνη και βρίσκεσαι αυτή τη στιγμή μέσα στο διαστημόπλοιο, στη μέση του διαστήματος. Το υπόλοιπο πλήρωμα βρίσκεται επίσης μέσα στο διαστημόπλοιο και περιμένετε όλοι υπομονετικά την άφιξή σας. Σήμερα η ημέρα είναι Κυριακή και περνάς την ημέρα σου χαλαρά, για να ξεκουραστείς και να είσαι έτοιμος/ έτοιμη για την εβδομάδα που έρχεται. Άλλο ένα συνηθισμένο απόγευμα στο διαστημόπλοιο ...
+    </p>
+
+    <div class="next">
+        <div class="btnnext" name="scene4">
+        <button onclick="hideElement('scene4','ignore'),showElement('scene5','trans5')"> Suivant </button>
+        </div>
+    </div>
+
+    <div class="translation">
+        <div class="btntrans" name="scene4">
+        <button onclick="translation('trans4')"> Μετάφραση </button>
+        </div>
+    </div>
+
+    <div class="previous">
+        <div class="btnprevious" name="scene4">
+        <button onclick="hideElement('scene4','ignore'),showElement('scene3','trans3')"> Précédent </button>
+        </div>
+    </div>
+
+    <div class="narration">
+        <div class="swap" name="scene4"> 
+            Το σύστημα ασφαλείας σε ταυτοποίησε με επιτυχία. Φυσικά και θυμόσουν το μέρος όπου πέρασες τις τελευταίες σου διακοπές με την οικογένειά σου στη Γη. Είχατε περάσει υπέροχα. Και τώρα σου λείπουν τόσο η οικογένειά σου όσο και οι φίλοι σου. Η καθημερινότητα στο διαστημόπλοιο οδηγεί σε απομόνωση, το εσωτερικό του διαστημοπλοίο είναι παγωμένο και γεμάτο καλώδια. Δεν κάνεις αυτά κλπ κλπ που έκανες στη Γη σεισαγωγή στο θέμα. Θλίβεσαι. Αποφασίζεις να γράψεις ημερολόγιο, με σκοπό να περιγράψεις καλύτερα τα αισθήματά σου και να εκφράσεις τη νοσταλγία σου για τη ζωή στη Γη.
+        </div> 
+    </div>
+
+    <p class="translation" id="trans4" name="scene4">
+        Για να θυμηθούμε την ιστορία, είσαι αστροναύτης. Είσαι μέλος μιας διαστημικής αποστολής προς τη Σελήνη και βρίσκεσαι αυτή τη στιγμή μέσα στο διαστημόπλοιο, στη μέση του διαστήματος. Το υπόλοιπο πλήρωμα βρίσκεται επίσης μέσα στο διαστημόπλοιο και περιμένετε όλοι υπομονετικά την άφιξή σας. Σήμερα η ημέρα είναι Κυριακή και περνάς την ημέρα σου χαλαρά, για να ξεκουραστείς και να είσαι έτοιμος/ έτοιμη για την εβδομάδα που έρχεται. Άλλο ένα συνηθισμένο απόγευμα στο διαστημόπλοιο ...
+    </p>
+
+    <div class="previous">
+        <div class="btnprevious" name="scene5">
+        <button onclick="hideElement('scene5','ignore'),showElement('scene4','trans4')"> Précédent </button>
+        </div>
+    </div>
+
+    <div class="translation">
+        <div class="btntrans" name="scene5">
+        <button onclick="translation('trans5')"> Μετάφραση </button>
+        </div>
+    </div>
+
+    <div class="narration">
+        <div class="swap" name="scene5"> 
+            Ενώ γράφεις το ημερολόγιο, ξαφνικά ακούς ένα βουητό. Το αγνοείς και συνεχίζεις να γράφεις. Όμως μετά από πέντε λεπτά, ακούς ένα χτύπημα στην πόρτα. Σηκώνεσαι από το γραφείο και πηγαίνεις να δεις ποιός είναι. Ταυτόχρονα ελπίζεις να είναι ο συνάδελφος που συνηθίζει να σε καλεί να παίξετε σκάκι τα απογεύματα της Κυριακής. Μία τέτοια έκλπηξη είναι πάντα ευχάριστη, ακόμα και αν σε αναγκάζει να διακόψεις το ημερολόγιο, το οποίο όπως φαίνεται σε είχε απορροφίσει. 
+        </div> 
+    </div>
+
+    <p class="translation" id="trans5" name="scene5">
+        Για να θυμηθούμε την ιστορία, είσαι αστροναύτης. Είσαι μέλος μιας διαστημικής αποστολής προς τη Σελήνη και βρίσκεσαι αυτή τη στιγμή μέσα στο διαστημόπλοιο, στη μέση του διαστήματος. Το υπόλοιπο πλήρωμα βρίσκεται επίσης μέσα στο διαστημόπλοιο και περιμένετε όλοι υπομονετικά την άφιξή σας. Σήμερα η ημέρα είναι Κυριακή και περνάς την ημέρα σου χαλαρά, για να ξεκουραστείς και να είσαι έτοιμος/ έτοιμη για την εβδομάδα που έρχεται. Άλλο ένα συνηθισμένο απόγευμα στο διαστημόπλοιο ...
+    </p>
+
+    <div class="tab">
+        <button 
+            class="tablinks" id='ignore' name="scene2" onclick="openCity(event, 'Vocabulaire')">Vocabulaire
+        </button>
+        <button 
+            class="tablinks" id='ignore' name="scene2" onclick="openCity(event, 'description')">Espace autour de moi
+        </button>  
+        <button 
+            class="tablinks" id='ignore' name="scene3" onclick="openCity(event, 'Ordinateur')">Ordinateur
+        </button>    
+        <button 
+            class="tablinks" id='ignore' name="scene4" onclick="openCity(event, 'Journal')">Journal
+        </button>
+        <button 
+            class="tablinks" id='ignore' name="scene5" onclick="openCity(event, 'submit')">Υποβολή
+        </button>
+    </div>
+    
+    <div id="Vocabulaire" class="tabcontent">
+      <p><div class="row">
+        <div class="column">
+        <figure>
+          <img src="img/img_snow.jpg" alt="Snow" style="width:100%">
+          <figcaption>Caption gdfeeffeefefeffefe effefefeoes here</figcaption>
+        </figure>
+        </div>
+        <div class="column">
+          <img src="img/img_forest.jpg" alt="Forest" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="img/img_mountains.jpg" alt="Mountains" style="width:100%">
+        </div>
+      </div></p>
+      <p><div class="row">
+        <div class="column">
+          <img src="img/img_snow.jpg" alt="Snow" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="img/img_forest.jpg" alt="Forest" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="img/img_mountains.jpg" alt="Mountains" style="width:100%">
+        </div>
+      </div></p>
+    </div>
+
+    <div id="description" class="tabcontent">
+        <p>
+            <form id="form1" action="mailto:ioligatsika@outlook.com" method="post" enctype="text/plain">
+                <textarea name="field3" class="blank" placeholder="Περιέγραψε αυτά που βλέπεις στην υπόλοιπη καμπίνα."></textarea>
+                <textarea name="field4" class="blank" placeholder="Κάνε κόπι πεστ το κείμενό σου στα γαλλικά από το Google translator."></textarea>
+        
+            </form>
+        </p>
+    </div>
+    
+    <div id="Ordinateur" class="tabcontent">
+        
+        <p>
+        <input type="button" id="phrase0" onclick="completeSentence('phrase0',3)" value="Démarrer l'ordinateur"/>
+    
+        <form id="form1" class="terminal" action="mailto:ioligatsika@outlook.com" method="post" enctype="text/plain">
+        <p id="phrase00"><blink>_</blink></p>
         <ul> 
             <li>
                 <div>
-                <label id="phrase1" for="nom"></label> 
+                <label id="phrase01" for="nom"></label> 
                 <input type="text" name="nom" id="nom" class="field-style field-split" />
                 </div>
             </li>
             <li>
                 <div>
-                <label id="phrase2" for="prenom"></label> 
+                <label id="phrase02" for="prenom"></label> 
                 <span><input type="text" name="prenom" id="prenom" class="field-style field-split" placeholder="" /></span>
                 </div>
             </li>
             <li>
                 <textarea name="field3" class="field-style" placeholder=""></textarea>
             </li>
-            <li>
-                <!--<input type="submit" value="Send Message" />-->
-            </li>
         </ul>
-    </form>
+        </form>
+        </p>
 
-    <a href="scene1.html" class="previous">&#60 Scène précedente</a>
-    <a href="scene2.html" class="next">Scène suivante &#62</a>
+    </div>
+
+    <div id="Journal" class="tabcontent">
+        <p>    
+        <input type="button" id="phrase1" onclick="completeSentence('phrase1',3)" value="Lancer le journal"/>
+
+        <form id="form2" class="terminal" action="mailto:ioligatsika@outlook.com" method="post" enctype="text/plain">
+            <p id="phrase10"><blink>_</blink></p>
+            <ul> 
+                <li>
+                    <div>
+                    <label id="phrase11" for="nom"></label> 
+                    <input type="text" name="nom" id="nom" class="field-style field-split" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                    <label id="phrase12" for="prenom"></label> 
+                    <span><input type="text" name="prenom" id="prenom" class="field-style field-split" placeholder="" /></span>
+                    </div>
+                </li>
+                <li>
+                    <textarea name="field3" class="field-style" placeholder=""></textarea>
+                </li>
+            </ul>
+        </form>
+        </p>
+    </div>
+
+    <div id="submit" class="tabcontent">
+        <p>    
+        <form 
+    
+            id="test-form" 
+        
+            action="https://script.google.com/macros/s/AKfycbzOvDHITZ-K15zmFKS0VT3-5sOgQWmJ6jqnnHoC31986Eiz3bg/exec"
+            
+            target="_blank" 
+            
+            method="get"
+            
+            dataType="json"
+            
+            >
+          
+            <div>
+                <label>Mon nom</label>
+                <input type="text" name="nom_eleve" placeholder="επώνυμο"/>
+            </div>
+              
+            <div>
+                <label>Mon prénom</label>
+                <input type="text" name="prenom_eleve" placeholder="όνομα"/>
+            </div>
+              
+            <div>
+                <input type="submit" id="submit-form" value="Finaliser" onclick="return empty('error1','ok1')"> 
+                <span class="error" id="error1"> Remplir ! </span>
+                <span class="ok" id="ok1"> OK ! </span>
+                </input>
+            </div>
+              
+        </form>
+        </p>
+    </div>
 
 </body>
 </html>
